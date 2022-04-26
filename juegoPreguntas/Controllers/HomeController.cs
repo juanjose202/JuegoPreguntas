@@ -20,9 +20,9 @@ namespace juegoPreguntas.Controllers
             return View();
         }
 
-        public ActionResult Contact()
+        public ActionResult Contacto()
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Message = "Datos de contacto";
 
             return View();
         }

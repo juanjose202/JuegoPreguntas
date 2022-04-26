@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="JuegoPreguntasModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Preguntas">
+    <Key>
+      <PropertyRef Name="idPregunta" />
+    </Key>
+    <Property Name="enunciado" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="correcta" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="incorrecta1" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="incorrecta2" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="incorrecta3" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="categoria" Type="Int32" />
+    <Property Name="idPregunta" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityContainer Name="JuegoPreguntasEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Preguntas" EntityType="Self.Preguntas" />
+    <EntitySet Name="Partida" EntityType="JuegoPreguntasModel.Partida" />
+  </EntityContainer>
+  <EntityType Name="Partida">
+    <Key>
+      <PropertyRef Name="idPartida" />
+    </Key>
+    <Property Name="nombreJugador" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="puntuacion" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="nivel" Type="Int32" />
+    <Property Name="resultado" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="idPartida" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+</Schema>

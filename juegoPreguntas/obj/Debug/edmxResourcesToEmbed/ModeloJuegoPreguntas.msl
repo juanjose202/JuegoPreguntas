@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="JuegoPreguntasModelStoreContainer" CdmEntityContainer="JuegoPreguntasEntities">
+    <EntitySetMapping Name="Preguntas">
+      <EntityTypeMapping TypeName="JuegoPreguntasModel.Preguntas">
+        <MappingFragment StoreEntitySet="Preguntas">
+          <ScalarProperty Name="idPregunta" ColumnName="idPregunta" />
+          <ScalarProperty Name="enunciado" ColumnName="enunciado" />
+          <ScalarProperty Name="correcta" ColumnName="correcta" />
+          <ScalarProperty Name="incorrecta1" ColumnName="incorrecta1" />
+          <ScalarProperty Name="incorrecta2" ColumnName="incorrecta2" />
+          <ScalarProperty Name="incorrecta3" ColumnName="incorrecta3" />
+          <ScalarProperty Name="categoria" ColumnName="categoria" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Partida">
+      <EntityTypeMapping TypeName="JuegoPreguntasModel.Partida">
+        <MappingFragment StoreEntitySet="Partida">
+          <ScalarProperty Name="idPartida" ColumnName="idPartida" />
+          <ScalarProperty Name="resultado" ColumnName="resultado" />
+          <ScalarProperty Name="nivel" ColumnName="nivel" />
+          <ScalarProperty Name="puntuacion" ColumnName="puntuacion" />
+          <ScalarProperty Name="nombreJugador" ColumnName="nombreJugador" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

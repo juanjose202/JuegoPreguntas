@@ -51,6 +51,8 @@ C:\Users\Juan José\Desktop\RetoSoftka\juegoPreguntas\juegoPreguntas\bin\roslyn\
 C:\Users\Juan José\Desktop\RetoSoftka\juegoPreguntas\juegoPreguntas\bin\roslyn\VBCSCompiler.exe
 C:\Users\Juan José\Desktop\RetoSoftka\juegoPreguntas\juegoPreguntas\bin\roslyn\VBCSCompiler.exe.config
 C:\Users\Juan José\Desktop\RetoSoftka\juegoPreguntas\juegoPreguntas\bin\Antlr3.Runtime.dll
+C:\Users\Juan José\Desktop\RetoSoftka\juegoPreguntas\juegoPreguntas\bin\EntityFramework.dll
+C:\Users\Juan José\Desktop\RetoSoftka\juegoPreguntas\juegoPreguntas\bin\EntityFramework.SqlServer.dll
 C:\Users\Juan José\Desktop\RetoSoftka\juegoPreguntas\juegoPreguntas\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Users\Juan José\Desktop\RetoSoftka\juegoPreguntas\juegoPreguntas\bin\Microsoft.Web.Infrastructure.dll
 C:\Users\Juan José\Desktop\RetoSoftka\juegoPreguntas\juegoPreguntas\bin\Newtonsoft.Json.dll
@@ -62,6 +64,8 @@ C:\Users\Juan José\Desktop\RetoSoftka\juegoPreguntas\juegoPreguntas\bin\System.
 C:\Users\Juan José\Desktop\RetoSoftka\juegoPreguntas\juegoPreguntas\bin\System.Web.WebPages.dll
 C:\Users\Juan José\Desktop\RetoSoftka\juegoPreguntas\juegoPreguntas\bin\System.Web.WebPages.Razor.dll
 C:\Users\Juan José\Desktop\RetoSoftka\juegoPreguntas\juegoPreguntas\bin\WebGrease.dll
+C:\Users\Juan José\Desktop\RetoSoftka\juegoPreguntas\juegoPreguntas\bin\EntityFramework.xml
+C:\Users\Juan José\Desktop\RetoSoftka\juegoPreguntas\juegoPreguntas\bin\EntityFramework.SqlServer.xml
 C:\Users\Juan José\Desktop\RetoSoftka\juegoPreguntas\juegoPreguntas\bin\System.Web.Helpers.xml
 C:\Users\Juan José\Desktop\RetoSoftka\juegoPreguntas\juegoPreguntas\bin\System.Web.Mvc.xml
 C:\Users\Juan José\Desktop\RetoSoftka\juegoPreguntas\juegoPreguntas\bin\System.Web.Optimization.xml

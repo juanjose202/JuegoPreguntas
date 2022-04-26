@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="JuegoPreguntasModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Partida">
+    <Key>
+      <PropertyRef Name="idPartida" />
+    </Key>
+    <Property Name="idPartida" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombreJugador" Type="nvarchar" MaxLength="50" />
+    <Property Name="puntuacion" Type="nvarchar" MaxLength="50" />
+    <Property Name="nivel" Type="int" />
+    <Property Name="resultado" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Preguntas">
+    <Key>
+      <PropertyRef Name="idPregunta" />
+    </Key>
+    <Property Name="idPregunta" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="enunciado" Type="nvarchar" MaxLength="200" />
+    <Property Name="correcta" Type="nvarchar" MaxLength="200" />
+    <Property Name="incorrecta1" Type="nvarchar" MaxLength="200" />
+    <Property Name="incorrecta2" Type="nvarchar" MaxLength="200" />
+    <Property Name="incorrecta3" Type="nvarchar" MaxLength="200" />
+    <Property Name="categoria" Type="int" />
+  </EntityType>
+  <EntityContainer Name="JuegoPreguntasModelStoreContainer">
+    <EntitySet Name="Partida" EntityType="Self.Partida" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Preguntas" EntityType="Self.Preguntas" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

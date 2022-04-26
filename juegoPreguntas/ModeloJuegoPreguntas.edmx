@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="JuegoPreguntasModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Partida">
+          <Key>
+            <PropertyRef Name="idPartida" />
+          </Key>
+          <Property Name="idPartida" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nombreJugador" Type="nvarchar" MaxLength="50" />
+          <Property Name="puntuacion" Type="nvarchar" MaxLength="50" />
+          <Property Name="nivel" Type="int" />
+          <Property Name="resultado" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Preguntas">
+          <Key>
+            <PropertyRef Name="idPregunta" />
+          </Key>
+          <Property Name="idPregunta" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="enunciado" Type="nvarchar" MaxLength="200" />
+          <Property Name="correcta" Type="nvarchar" MaxLength="200" />
+          <Property Name="incorrecta1" Type="nvarchar" MaxLength="200" />
+          <Property Name="incorrecta2" Type="nvarchar" MaxLength="200" />
+          <Property Name="incorrecta3" Type="nvarchar" MaxLength="200" />
+          <Property Name="categoria" Type="int" />
+        </EntityType>
+        <EntityContainer Name="JuegoPreguntasModelStoreContainer">
+          <EntitySet Name="Partida" EntityType="Self.Partida" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Preguntas" EntityType="Self.Preguntas" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="JuegoPreguntasModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Preguntas">
+          <Key>
+            <PropertyRef Name="idPregunta" />
+          </Key>
+          <Property Name="enunciado" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="correcta" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="incorrecta1" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="incorrecta2" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="incorrecta3" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="categoria" Type="Int32" />
+          <Property Name="idPregunta" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityContainer Name="JuegoPreguntasEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Preguntas" EntityType="Self.Preguntas" />
+          <EntitySet Name="Partida" EntityType="JuegoPreguntasModel.Partida" />
+        </EntityContainer>
+        <EntityType Name="Partida">
+          <Key>
+            <PropertyRef Name="idPartida" />
+          </Key>
+          <Property Name="nombreJugador" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="puntuacion" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="nivel" Type="Int32" />
+          <Property Name="resultado" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="idPartida" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="JuegoPreguntasModelStoreContainer" CdmEntityContainer="JuegoPreguntasEntities">
+          <EntitySetMapping Name="Preguntas">
+            <EntityTypeMapping TypeName="JuegoPreguntasModel.Preguntas">
+              <MappingFragment StoreEntitySet="Preguntas">
+                <ScalarProperty Name="idPregunta" ColumnName="idPregunta" />
+                <ScalarProperty Name="enunciado" ColumnName="enunciado" />
+                <ScalarProperty Name="correcta" ColumnName="correcta" />
+                <ScalarProperty Name="incorrecta1" ColumnName="incorrecta1" />
+                <ScalarProperty Name="incorrecta2" ColumnName="incorrecta2" />
+                <ScalarProperty Name="incorrecta3" ColumnName="incorrecta3" />
+                <ScalarProperty Name="categoria" ColumnName="categoria" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Partida">
+            <EntityTypeMapping TypeName="JuegoPreguntasModel.Partida">
+              <MappingFragment StoreEntitySet="Partida">
+                <ScalarProperty Name="idPartida" ColumnName="idPartida" />
+                <ScalarProperty Name="resultado" ColumnName="resultado" />
+                <ScalarProperty Name="nivel" ColumnName="nivel" />
+                <ScalarProperty Name="puntuacion" ColumnName="puntuacion" />
+                <ScalarProperty Name="nombreJugador" ColumnName="nombreJugador" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,96 @@
+﻿@model IEnumerable<juegoPreguntas.Preguntas>
+
+
+
+@{
+    ViewBag.Title = "Preguntas";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<script src="https://kit.fontawesome.com/5c86c723f3.js" crossorigin="anonymous"></script>
+
+<h2>Lista de Preguntas</h2>
+
+<p>
+
+    <a href="@Url.Action("Create", "Preguntas")" title="Crear Pregunta" style="font-size:25px ; color:goldenrod">
+        <i class="fa-solid fa-square-plus"></i>
+    </a>
+
+</p>
+<table class="table" >
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.idPregunta)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.enunciado)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.correcta)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.incorrecta1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.incorrecta2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.incorrecta3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.categoria)
+        </th>
+
+        <th align="center">
+            Acciones
+        </th>
+
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.idPregunta)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.enunciado)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.correcta)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.incorrecta1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.incorrecta2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.incorrecta3)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.categoria)
+            </td>
+            <td>
+
+
+
+                <a style="font-size:25px; color:blue"  href="@Url.Action("Details", "Preguntas", new { id = item.idPregunta })" title="Detalles">
+                    <i class="fa-solid fa-circle-info"> </i>
+                </a>
+                <a style="font-size:25px; color:green" href="@Url.Action("Edit", "Preguntas", new { id = item.idPregunta }) " title="Editar pregunta">
+                    <i class="fa-solid fa-pen"></i>
+                </a>
+                <a style="font-size:25px; color:red" href="@Url.Action("Delete", "Preguntas", new { id = item.idPregunta })" title="Eliminar Pregunta">
+                    <i class="fa-solid fa-trash"></i>
+                </a>
+
+            </td>
+        </tr>
+    }
+
+</table>

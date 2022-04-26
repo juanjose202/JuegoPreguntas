@@ -1,0 +1,95 @@
+﻿@model juegoPreguntas.Preguntas
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Eliminar</h2>
+<div>
+    <h4>Eliminación de la pregunta</h4>
+
+
+
+    <p>
+        <a href="@Url.Action("index", "Preguntas")" title="Atras" style="font-size:25px ; color:black">
+            <i class="fa-solid fa-circle-arrow-left"></i>
+        </a>
+    </p>
+
+
+
+    <hr />
+    <dl class="dl-horizontal">
+
+        <dt>
+            @Html.DisplayNameFor(model => model.idPregunta)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.idPregunta)
+        </dd>
+
+
+        <dt>
+            @Html.DisplayNameFor(model => model.enunciado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.enunciado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.correcta)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.correcta)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.incorrecta1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.incorrecta1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.incorrecta2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.incorrecta2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.incorrecta3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.incorrecta3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.categoria)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.categoria)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+
+
+            <input style="background-color:lightcoral" class="btn" type="submit" value="Eliminar" />
+
+        </div>
+    }
+</div>
