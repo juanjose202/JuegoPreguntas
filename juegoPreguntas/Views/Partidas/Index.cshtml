@@ -1,0 +1,52 @@
+﻿@model IEnumerable<juegoPreguntas.Partida>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.nombreJugador)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.puntuacion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.nivel)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.resultado)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.nombreJugador)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.puntuacion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.nivel)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.resultado)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.idPartida }) |
+            @Html.ActionLink("Details", "Details", new { id=item.idPartida }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.idPartida })
+        </td>
+    </tr>
+}
+
+</table>

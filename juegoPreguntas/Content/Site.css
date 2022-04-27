@@ -22,3 +22,17 @@ select,
 textarea {
     max-width: 280px;
 }
+
+
+.navbar-brand {
+    background: url(https://images.vexels.com/media/users/3/152347/isolated/preview/27304b9b14ce9bd8a28ca637ed92070e-icono-de-signo-de-interrogacion-de-circulo-azul.png) no-repeat;
+    background-size: 40px 40px;
+    height: 40px;
+    margin: 5px;
+    width: 40px;
+}
+
+.navbar-text{
+    background-color:white
+    
+}

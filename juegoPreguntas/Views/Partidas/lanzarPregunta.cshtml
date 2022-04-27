@@ -1,0 +1,94 @@
+﻿@model IEnumerable<juegoPreguntas.Preguntas>
+
+@{
+    ViewBag.Title = "Juego de preguntas";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+
+
+    Random rnd = new Random();
+    var Preguntas = Model.ToList();
+    int r = rnd.Next(Preguntas.Count);
+
+    Preguntas pregunta = Preguntas[r];
+
+
+
+    List<String> opciones = new List<string>();
+
+
+    opciones.Add(pregunta.correcta);
+    opciones.Add(pregunta.incorrecta1);
+    opciones.Add(pregunta.incorrecta2);
+    opciones.Add(pregunta.incorrecta3);
+
+
+    var orden = 0;
+
+
+    orden = rnd.Next(0, opciones.Count);
+    var opcion1 = opciones[orden];
+    opciones.RemoveAt(orden);
+
+    orden = rnd.Next(opciones.Count);
+    var opcion2 = opciones[orden];
+    opciones.RemoveAt(orden);
+
+    orden = rnd.Next(opciones.Count);
+    var opcion3 = opciones[orden];
+    opciones.RemoveAt(orden);
+
+    orden = rnd.Next(opciones.Count);
+    var opcion4 = opciones[orden];
+    opciones.RemoveAt(orden);
+
+
+
+
+}
+
+
+
+
+
+<div class="jumbotron" style="margin-top:25px">
+
+
+
+    <CENTER>
+
+        <h2>Pregunta # @pregunta.categoria</h2>
+
+    </CENTER>
+
+
+
+
+
+    <h4>@pregunta.enunciado</h4>
+
+    @using (Html.BeginForm("validacionRespuesta", "Partidas", FormMethod.Post))
+    {
+        <div style="margin-top 25PX">
+
+            <br />
+            @Html.RadioButton("Respuesta", pregunta.idPregunta + "/" + opcion1) @opcion1<br />
+            <br />
+            @Html.RadioButton("Respuesta", pregunta.idPregunta + "/" + opcion2) @opcion2<br />
+            <br />
+            @Html.RadioButton("Respuesta", pregunta.idPregunta + "/" + opcion3) @opcion3<br />
+            <br />
+            @Html.RadioButton("Respuesta", pregunta.idPregunta + "/" + opcion4) @opcion4
+
+        </div>
+
+        <input style="margin-top:25px" type="submit" value="Responder" />
+
+    }
+
+</div>
+
+
+
+
+

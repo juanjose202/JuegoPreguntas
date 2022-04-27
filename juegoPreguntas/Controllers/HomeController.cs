@@ -22,7 +22,6 @@ namespace juegoPreguntas.Controllers
 
         public ActionResult Contacto()
         {
-            ViewBag.Message = "Datos de contacto";
 
             return View();
         }

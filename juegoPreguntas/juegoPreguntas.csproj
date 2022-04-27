@@ -130,6 +130,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\PartidasController.cs" />
     <Compile Include="Controllers\PreguntasController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -166,6 +167,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="images\logo.png" />
     <Content Include="ModeloJuegoPreguntas.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>ModeloJuegoPreguntas.edmx</DependentUpon>
@@ -215,6 +217,13 @@
     <Content Include="Views\Preguntas\Details.cshtml" />
     <Content Include="Views\Preguntas\Edit.cshtml" />
     <Content Include="Views\Preguntas\Index.cshtml" />
+    <Content Include="Views\Partidas\lanzarPregunta.cshtml" />
+    <Content Include="Views\Partidas\Create.cshtml" />
+    <Content Include="Views\Partidas\Delete.cshtml" />
+    <Content Include="Views\Partidas\Details.cshtml" />
+    <Content Include="Views\Partidas\Edit.cshtml" />
+    <Content Include="Views\Partidas\Index.cshtml" />
+    <Content Include="Views\Partidas\validacionRespuesta.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

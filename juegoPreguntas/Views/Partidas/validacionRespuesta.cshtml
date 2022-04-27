@@ -1,0 +1,45 @@
+﻿
+@model IEnumerable<string>
+
+
+@{
+    ViewBag.Title = "validacionRespuesta";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    var substrings = Model.ToList();
+    var correcta = false;
+
+    int id = Int32.Parse(substrings[0]);
+    var respuestaSeleccionada = substrings[1];
+
+
+    JuegoPreguntasEntities db = new JuegoPreguntasEntities();
+    var preguntaRealizada = db.Preguntas.Find(id);
+
+
+    if (preguntaRealizada.correcta.Equals(respuestaSeleccionada))
+    {
+        correcta = true;
+    }
+    else
+    {
+        correcta = false;
+    }
+
+
+
+}
+
+
+
+@if (correcta == true)
+{
+
+
+    <h2>Felicidades su respuesta es correcta</h2>
+}
+else
+{
+
+}
+
