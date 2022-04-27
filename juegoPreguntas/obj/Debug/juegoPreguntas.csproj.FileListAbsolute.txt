@@ -87,3 +87,4 @@ C:\Users\Juan José\Desktop\RetoSoftka\juegoPreguntas\juegoPreguntas\obj\Debug\j
 C:\Users\Juan José\Desktop\RetoSoftka\juegoPreguntas\juegoPreguntas\obj\Debug\juegoPreguntas.csproj.CopyComplete
 C:\Users\Juan José\Desktop\RetoSoftka\juegoPreguntas\juegoPreguntas\obj\Debug\juegoPreguntas.dll
 C:\Users\Juan José\Desktop\RetoSoftka\juegoPreguntas\juegoPreguntas\obj\Debug\juegoPreguntas.pdb
+C:\Users\Juan José\Desktop\RetoSoftka\juegoPreguntas\juegoPreguntas\obj\Debug\juegoPreguntas.csproj.AssemblyReference.cache

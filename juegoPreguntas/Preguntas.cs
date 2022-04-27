@@ -36,7 +36,7 @@ namespace juegoPreguntas
 
         [Display(Name = "Categoria")]
         [Required(ErrorMessage = "Debes ingresar {0}")]
-        [Range(1,4, ErrorMessage = "El valor {0} debe estar entre 1 y 5 ")]
+        [Range(1,5, ErrorMessage = "El valor {0} debe estar entre 1 y 5 ")]
         public Nullable<int> categoria { get; set; }
 
     }

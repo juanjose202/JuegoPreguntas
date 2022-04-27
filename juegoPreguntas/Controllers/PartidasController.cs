@@ -7,6 +7,8 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using juegoPreguntas;
+using juegoPreguntas.Models;
+
 
 namespace juegoPreguntas.Controllers
 {
@@ -14,6 +16,7 @@ namespace juegoPreguntas.Controllers
     {
         private JuegoPreguntasEntities db = new JuegoPreguntasEntities();
         public Partida Mipartida = new Partida();
+        public const int MAXIMONIVEL = 5;
 
         // GET: Partidas
         public ActionResult Index()
@@ -26,11 +29,26 @@ namespace juegoPreguntas.Controllers
         {
 
             var respuestaRadio = frm["Respuesta"].ToString();
-
             string[] substrings = respuestaRadio.Split('/');
 
-    
-            return View(substrings);
+            int id = Int32.Parse(substrings[0]);
+            var respuestaSeleccionada = substrings[1];
+
+
+            JuegoPreguntasEntities db = new JuegoPreguntasEntities();
+            var preguntaRealizada = db.Preguntas.Find(id);
+            var respuestaCorrecta = preguntaRealizada.correcta;
+            int nivel = Int32.Parse(preguntaRealizada.categoria.ToString());
+
+
+            Informacion info = new Informacion(respuestaCorrecta,respuestaSeleccionada,nivel);
+
+            List<Informacion> listaInfo = new List<Informacion>();
+
+            listaInfo.Add(info);
+
+
+            return View(listaInfo);
 
 
 
@@ -39,13 +57,32 @@ namespace juegoPreguntas.Controllers
         public ActionResult lanzarPregunta(int categoriaNivel)
         {
     
-            Mipartida.nivel = categoriaNivel;
-            Mipartida.puntuacion = Mipartida.puntuacion + (categoriaNivel * 100);
 
-            var preguntas = db.Preguntas.Where(c => c.categoria == categoriaNivel).ToList();
+            if (categoriaNivel  > MAXIMONIVEL)
+            {
+                var pregunta = new Preguntas();
+                pregunta.categoria = MAXIMONIVEL + 1;
+                List<Preguntas> preguntas = new List<Preguntas>();
+                preguntas.Add(pregunta);
+                return View(preguntas);
+            }
+            else
+            {
+                Mipartida.nivel = categoriaNivel;
+                Mipartida.puntuacion = Mipartida.puntuacion + (categoriaNivel * 100);
+                var preguntas = db.Preguntas.Where(c => c.categoria == categoriaNivel).ToList();
+                return View(preguntas);
+            }
 
-            return View(preguntas);
 
+         
+
+        }
+
+
+        public ActionResult vistaFinal(string puntajeEstado)
+        {
+            return View();
         }
 
 

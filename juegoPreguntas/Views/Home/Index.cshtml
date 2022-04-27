@@ -1,6 +1,6 @@
 ﻿@{
     ViewBag.Title = "Pagina principal";
-    
+
 
 }
 
@@ -9,19 +9,21 @@
 
 <div class="jumbotron" style="margin-top:25px">
     <h1>Juego de Preguntas </h1>
-    <p class="lead">El juego consta de 5 niveles, en cada nivel te saldra una pregunta de mayor dificultad que la anterior, si respondes correctamente ganaras DINERO.</p>
-    <p class="lead">Cada vez que superes un nivel tendras la opcion de retirarte o de seguir jugando.</p>
+    <p class="lead">El juego consta de 5 niveles, en cada nivel te saldra una pregunta de mayor dificultad que la anterior, si respondes correctamente ganaras PUNTOS.</p>
+    <p class="lead">Si superas los 5 niveles ganaras el premio mayor.</p>
+    <p class="lead">Cada vez que superes un nivel tendras la opcion de retirarte con tus puntos o de seguir jugando.</p>
+    <p class="lead">En caso de reponder incorrectamente perderas todos tus puntos.</p>
     <p class="lead">Para iniciar el juego presione el boton PLAY</p>
 
 
     <CENTER style="margin-top:100px">
-        
-    
 
-            <a style="font-size:75PX; margin-top:25PX; color:blue" href="@Url.Action("lanzarPregunta","Partidas",new { categoriaNivel = 1 })" title="Jugar">
-                <i class="fa-solid fa-play"></i>
-            </a>
-     
+
+
+        <a style="font-size:75PX; margin-top:25PX; color:blue" href="@Url.Action("lanzarPregunta","Partidas",new { categoriaNivel = 1 })" title="Jugar">
+            <i class="fa-solid fa-play"></i>
+        </a>
+
     </CENTER>
 
 
