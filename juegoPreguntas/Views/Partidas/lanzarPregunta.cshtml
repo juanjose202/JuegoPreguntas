@@ -79,6 +79,9 @@
             @Html.RadioButton("Respuesta", pregunta.idPregunta + "/" + opcion3) @opcion3<br />
             <br />
             @Html.RadioButton("Respuesta", pregunta.idPregunta + "/" + opcion4) @opcion4
+            <br />
+
+            <div hidden> @Html.RadioButton("Respuesta", pregunta.idPregunta + "/vacio", true) @opcion1 </div>
 
         </div>
 

@@ -41,7 +41,7 @@ namespace juegoPreguntas.Controllers
             int nivel = Int32.Parse(preguntaRealizada.categoria.ToString());
 
 
-            Informacion info = new Informacion(respuestaCorrecta,respuestaSeleccionada,nivel);
+            Informacion info = new Informacion(respuestaCorrecta, respuestaSeleccionada, nivel);
 
             List<Informacion> listaInfo = new List<Informacion>();
 
@@ -56,9 +56,9 @@ namespace juegoPreguntas.Controllers
 
         public ActionResult lanzarPregunta(int categoriaNivel)
         {
-    
 
-            if (categoriaNivel  > MAXIMONIVEL)
+
+            if (categoriaNivel > MAXIMONIVEL)
             {
                 var pregunta = new Preguntas();
                 pregunta.categoria = MAXIMONIVEL + 1;
@@ -75,13 +75,30 @@ namespace juegoPreguntas.Controllers
             }
 
 
-         
+
 
         }
 
 
         public ActionResult vistaFinal(string puntajeEstado)
         {
+            string[] substrings = puntajeEstado.Split('/');
+            var nivel = Int32.Parse(substrings[0]); ;
+            var puntuacion = substrings[1]; ;
+            var resultado = substrings[2]; ;
+
+
+            var partida = new Partida()
+            {
+                resultado = resultado,
+                puntuacion = puntuacion,
+                nombreJugador = DateTime.Now.ToString(),
+                nivel = nivel,
+
+            };
+
+            db.Partida.Add(partida);
+            db.SaveChanges();
             return View();
         }
 

@@ -36,7 +36,7 @@
 
         <CENTER style="margin-top:100px">
             <p class="lead">respondiste todas las preguntas de manera correcta, ganaste el premio final.</p>
-            <a class="btn btn-primary" style="background-color:lightblue" href="@Url.Action("vistaFinal","Partidas",new { puntajeEstado = puntaje+"/GANADOR"  })" role="button">CONTINUAR</a>
+            <a class="btn btn-primary" style="background-color:lightblue; color:black " href="@Url.Action("vistaFinal","Partidas",new { puntajeEstado = (nuevoNivel - 1)+"/"+puntaje+"/GANADOR"  })" role="button">CONTINUAR</a>
         </CENTER>
 
     </div>
@@ -63,8 +63,8 @@ else
 
             <CENTER style="margin-top:100px">
                 <p class="lead">Puedes retirarte o puedes seguir jugando.</p>
-                <a class="btn btn-primary" style="background-color:lightblue" href="@Url.Action("lanzarPregunta","Partidas",new { categoriaNivel = nuevoNivel })" role="button">CONTINUAR</a>
-                <a class="btn btn-primary" style="background-color:lightcoral" href="@Url.Action("vistaFinal","Partidas",new {puntajeEstado = puntaje+"/RETIRADO"  })" role="button">RETIRARSE</a>
+                <a class="btn btn-primary" style="background-color:lightblue ; color:black"  href="@Url.Action("lanzarPregunta","Partidas",new { categoriaNivel = nuevoNivel })" role="button">CONTINUAR</a>
+                <a class="btn btn-primary" style="background-color:lightcoral ; color:black"  href="@Url.Action("vistaFinal","Partidas",new {puntajeEstado = (nuevoNivel - 1)+"/"+puntaje+"/RETIRADO"  })" role="button">RETIRARSE</a>
 
             </CENTER>
 
@@ -87,7 +87,7 @@ else
 
             <CENTER style="margin-top:100px">
                 <p class="lead">respondiste de manera incorrecta pero puedes volver a jugar</p>
-                <a class="btn btn-primary" style="background-color:lightblue" href="@Url.Action("vistaFinal","Partidas",new { untajeEstado = "0/PERDEDOR"  })" role="button">CONTINUAR</a>
+                <a class="btn btn-primary" style="background-color:lightblue; color:black" href="@Url.Action("vistaFinal","Partidas",new { puntajeEstado = (nuevoNivel - 1)+"/"+"0/PERDEDOR"  })" role="button">CONTINUAR</a>
             </CENTER>
 
 

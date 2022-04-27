@@ -4,5 +4,26 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>vistaGanador</h2>
+<div class="jumbotron" style="margin-top:25px">
+   
+
+    <CENTER style="margin-top:100px">
+
+
+        <h1>Juego de Preguntas </h1>
+
+
+        <p class="lead">Gracias por jugar</p>
+        <p class="lead">Su partida se guardara en el historico</p>
+        <p class="lead">si desea volver a jugar presione el boton play</p>
+
+
+        <a style="font-size:75PX; margin-top:25PX; color:lightblue" href="@Url.Action("lanzarPregunta","Partidas",new { categoriaNivel = 1 })" title="Jugar">
+            <i class="fa-solid fa-play"></i>
+        </a>
+
+    </CENTER>
+
+
+</div>
 

@@ -83,8 +83,8 @@ C:\Users\Juan José\Desktop\RetoSoftka\juegoPreguntas\juegoPreguntas\bin\es\Syst
 C:\Users\Juan José\Desktop\RetoSoftka\juegoPreguntas\juegoPreguntas\bin\es\System.Web.WebPages.resources.dll
 C:\Users\Juan José\Desktop\RetoSoftka\juegoPreguntas\juegoPreguntas\bin\es\System.Web.WebPages.Deployment.resources.dll
 C:\Users\Juan José\Desktop\RetoSoftka\juegoPreguntas\juegoPreguntas\bin\es\System.Web.WebPages.Razor.resources.dll
+C:\Users\Juan José\Desktop\RetoSoftka\juegoPreguntas\juegoPreguntas\obj\Debug\juegoPreguntas.csproj.AssemblyReference.cache
 C:\Users\Juan José\Desktop\RetoSoftka\juegoPreguntas\juegoPreguntas\obj\Debug\juegoPreguntas.csproj.CoreCompileInputs.cache
 C:\Users\Juan José\Desktop\RetoSoftka\juegoPreguntas\juegoPreguntas\obj\Debug\juegoPreguntas.csproj.CopyComplete
 C:\Users\Juan José\Desktop\RetoSoftka\juegoPreguntas\juegoPreguntas\obj\Debug\juegoPreguntas.dll
 C:\Users\Juan José\Desktop\RetoSoftka\juegoPreguntas\juegoPreguntas\obj\Debug\juegoPreguntas.pdb
-C:\Users\Juan José\Desktop\RetoSoftka\juegoPreguntas\juegoPreguntas\obj\Debug\juegoPreguntas.csproj.AssemblyReference.cache
