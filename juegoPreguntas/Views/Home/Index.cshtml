@@ -5,23 +5,60 @@
 }
 
 
+<style>
 
+    .esteDiv-p {
+        margin-top: 100px;
+    }
+
+    .l {
+        color: green;
+        margin-top: 1px;
+    }
+
+    .titulo{
+        background-color:lightblue;
+        border-radius:10px;
+        padding:5px;
+        font-weight:bold;
+        margin-top : 1px
+
+     
+           
+    }
+
+    h4 {
+        text-align: center
+    }
+
+</style>
 
 <div class="jumbotron" style="margin-top:25px">
-    <h1>Juego de Preguntas </h1>
-    <p class="lead">El juego consta de 5 niveles, en cada nivel te saldra una pregunta de mayor dificultad que la anterior, si respondes correctamente ganaras PUNTOS.</p>
-    <p class="lead">Si superas los 5 niveles ganaras el premio mayor.</p>
-    <p class="lead">Cada vez que superes un nivel tendras la opcion de retirarte con tus puntos o de seguir jugando.</p>
-    <p class="lead">En caso de reponder incorrectamente perderas todos tus puntos.</p>
-    <p class="lead">Para iniciar el juego presione el boton PLAY</p>
 
 
-    <CENTER style="margin-top:100px">
+    <CENTER>
+
+        <h2 class="titulo"> Juego de Preguntas </h2>
+        <p> Este juego consta de 5 niveles, en cada nivel te saldrá una pregunta,cada una con mayor dificultad que la anterior. Si respondes correctamente ganaras PUNTOS y subirás de nivel.</p>
+    </CENTER>
+
+
+    <h4 class="l"> ----------------------------------------------</h4>
+    <h4 class="l"> Nivel 1 Ciudades+100 Puntos</h4>
+    <h4 class="l"> Nivel 2 Paises +200 Puntos</h4>
+    <h4 class="l"> Nivel 3 Imperios +300 Puntos</h4>
+    <h4 class="l"> Nivel 4 Banderas +400 Puntos</h4>
+    <h4 class="l"> Nivel 5 Mundiales +500 Puntos</h4>
+    <h4 class="l"> ----------------------------------------------</h4>
 
 
 
-        <a style="font-size:75PX; margin-top:25PX; color:lightblue" href="@Url.Action("lanzarPregunta","Partidas",new { categoriaNivel = 1 })" title="Jugar">
-            <i class="fa-solid fa-play"></i>
+    <CENTER>
+        <p class="lead"> Cada vez que superes un nivel tendrás la opción de retirarte con tus puntos o de seguir jugando por más puntos, en caso de reponder incorrectamente perderás todos tus puntos.</p>
+        <p class="lead"> </p>
+        <p class="lead"> Para iniciar el juego, presione el boton PLAY</p>
+        <a style="font-size:50PX;; color:green" href="@Url.Action("lanzarPregunta","Partidas",new { categoriaNivel = 1 })" title="Jugar">
+            <i class="fa-solid fa-play"> </i>
         </a>
 
     </CENTER>

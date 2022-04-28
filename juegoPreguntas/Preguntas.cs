@@ -21,20 +21,20 @@ namespace juegoPreguntas
         [Required(ErrorMessage = "Debes ingresar {0}")]
         public string correcta { get; set; }
 
-        [Display(Name = "Respuesta incorrecta 1")]
+        [Display(Name = "Incorrecta 1")]
         [Required(ErrorMessage = "Debes ingresar {0}")]
         public string incorrecta1 { get; set; }
 
 
-        [Display(Name = "Respuesta incorrecta 2")]
+        [Display(Name = "Incorrecta 2")]
         [Required(ErrorMessage = "Debes ingresar {0}")]
         public string incorrecta2 { get; set; }
 
-        [Display(Name = "Respuesta incorrecta 3")]
+        [Display(Name = "Incorrecta 3")]
         [Required(ErrorMessage = "Debes ingresar {0}")]
         public string incorrecta3 { get; set; }
 
-        [Display(Name = "Categoria")]
+        [Display(Name = "Categoria/Dificultad")]
         [Required(ErrorMessage = "Debes ingresar {0}")]
         [Range(1,5, ErrorMessage = "El valor {0} debe estar entre 1 y 5 ")]
         public Nullable<int> categoria { get; set; }

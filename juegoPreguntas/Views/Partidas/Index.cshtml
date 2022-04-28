@@ -13,6 +13,9 @@
             @Html.DisplayNameFor(model => model.idPartida)
         </th>
         <th>
+            @Html.DisplayNameFor(model => model.nombreJugador)
+        </th>
+        <th>
             @Html.DisplayNameFor(model => model.puntuacion)
         </th>
         <th>
@@ -32,6 +35,9 @@
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.idPartida)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.nombreJugador)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.puntuacion)
